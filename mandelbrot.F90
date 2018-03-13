@@ -24,7 +24,7 @@ program main
   allocate(zs(imax, jmax))
 
   call system_clock(clk(1), clk_rate, clk_max)
-  !$omp parallel do private(i, j, x, y, c, z)
+  !$omp parallel do private(i, j, iter, x, y, c, z)
   do j = 1, jmax
      y = y_min + (j - 1)*dy
      do i = 1, imax
