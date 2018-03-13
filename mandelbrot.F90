@@ -9,7 +9,6 @@ program main
   complex(8) :: z, c
   complex(8),allocatable,dimension(:,:) :: zs
   real(8) :: x, y
-  character(len=16) :: argv1
   integer :: iter
   integer :: i, j, imax, jmax
   real(8) :: time
