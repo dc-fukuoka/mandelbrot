@@ -42,5 +42,4 @@ y_max    = 0.3d0
 tol      = 1.0d2
 /
 ~~~
-`$ display mandelbrot.png`  
 ![Alt text](./mandelbrot2.png?raw=true "Mandelbrot set")
