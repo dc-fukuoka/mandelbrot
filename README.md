@@ -1,5 +1,10 @@
 Mandelbrot set by OpenMP.
 ====
+requirements for python:
+  - numpy
+  - scipy
+  - matplotlib
+  - f90nml
   
 * how to run:  
 ~~~
