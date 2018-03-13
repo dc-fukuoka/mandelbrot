@@ -6,7 +6,8 @@ requirements for python:
   - matplotlib
   - f90nml
   
-* how to run:  
+how to run:
+---
 ~~~
 $ make
 $ vi fort.11 # adjust the parameters
