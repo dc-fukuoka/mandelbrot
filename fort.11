@@ -1,0 +1,10 @@
+&params
+iter_max = 200
+dx       = 1.0d-2
+dy       = 1.0d-2
+x_min    = -2.25d0
+x_max    = 0.75d0
+y_min    = -1.25d0
+y_max    = 1.25d0
+tol      = 1.0d2
+/
