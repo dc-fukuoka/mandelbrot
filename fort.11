@@ -8,3 +8,8 @@ y_min    = -1.25d0
 y_max    = 1.25d0
 tol      = 1.0d2
 /
+
+&mpi
+np_i = 4
+np_j = 4
+/

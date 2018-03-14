@@ -1,4 +1,4 @@
-Mandelbrot set by OpenMP.
+Mandelbrot set by MPI/OpenMP.
 ====
 requirements for python:
   - numpy
@@ -8,14 +8,27 @@ requirements for python:
   
 how to run:
 ---
+* for OpenMP version
 ~~~
-$ make
+$ export FC=ifort
+$ make a.out
 $ vi fort.11 # adjust the parameters
 $ ./a.out
  maximum iteration:         200
  imax:         301 jmax:         251
  time[s]:  1.210000000000000E-002
 ./draw.py
+~~~
+* for MPI version
+~~~
+$ export MPIFC=mpiifort
+$ make a.out.mpi
+$ vi fort.11 # adjust the parameters
+$ mpirun -np $NP ./a.out.mpi # where $NP must equal to np_i*np_j in fort.11
+ maximum iteration:         200
+ imax:         301 jmax:         251
+ time[s]:  7.543087005615234E-003
+./draw_mpi.py
 ~~~
   
 `$ display mandelbrot.png`  
