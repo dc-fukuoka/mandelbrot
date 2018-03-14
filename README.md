@@ -43,6 +43,7 @@ $ gnuplot
 gnuplot> set pm3d map
 gnuplot> splot "fort.100"
 ~~~
+MPI version can not use gnuplot because the output is a binary.
 
 * zoomed calculation
 ~~~
