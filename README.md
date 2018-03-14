@@ -30,7 +30,9 @@ $ mpirun -np $NP ./a.out.mpi # where $NP must equal to np_i*np_j in fort.11
  time[s]:  7.543087005615234E-003
 ./draw_mpi.py
 ~~~
-  
+
+to view the graph
+====
 `$ display mandelbrot.png`  
 ![Alt text](./mandelbrot.png?raw=true "Mandelbrot set")
   
