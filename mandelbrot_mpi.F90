@@ -32,7 +32,6 @@ program main
   type(mpi_file) :: fh
   integer(kind=mpi_offset_kind) :: disp
   type(mpi_status) :: stat
-  integer :: ierr
   
   call mpi_init
   call mpi_comm_rank(mpi_comm_world, iam)
@@ -106,12 +105,12 @@ program main
   starts(1)   = istart - 1
   starts(2)   = jstart - 1
     
-  call mpi_type_create_subarray(2, sizes, subsizes, starts, mpi_order_fortran, mpi_real8, filetype, ierr)
+  call mpi_type_create_subarray(2, sizes, subsizes, starts, mpi_order_fortran, mpi_real8, filetype)
   
   call mpi_type_commit(filetype)
   call mpi_file_open(mpi_comm_world, out, mpi_mode_wronly+mpi_mode_create, mpi_info_null, fh)
   disp = 0
-  call mpi_file_set_view(fh, disp, mpi_real8, filetype, "native", mpi_info_null, ierr)
+  call mpi_file_set_view(fh, disp, mpi_real8, filetype, "native", mpi_info_null)
 
   allocate(abs_zs(istart:iend, jstart:jend))
 
@@ -141,7 +140,7 @@ program main
   time = mpi_wtime() - t0
   if (iam == 0) write(6, *) "time[s]:", time
 
-  call mpi_file_write_all(fh, abs_zs, imax_l*jmax_l, mpi_real8, stat, ierr)
+  call mpi_file_write_all(fh, abs_zs, imax_l*jmax_l, mpi_real8, stat)
 
   ! finalize
   call mpi_file_close(fh)
