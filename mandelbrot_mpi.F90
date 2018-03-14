@@ -65,7 +65,7 @@ program main
      write(6, *) "imax:", imax, "jmax:", jmax
   end if
 
-  ! local indeces
+  ! local indices
   ! for i
   imax_mod = mod(imax, np_i)
   imax_l = imax/np_i
