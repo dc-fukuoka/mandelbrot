@@ -96,32 +96,28 @@ srun: Warning: can't run 1 processes on 8 nodes, setting nnodes to 1
 ~~~
 * flat MPI(1 node, 16 cores, np_i=4, np_j=4, 1 thread/process)
 ~~~
-$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=1 KMP_AFFINITY=compact srun --mpi=pmi2 -N1 -n16 -c1 --cpu_bind=
-cores -m block:block ./a.out.mpi
+$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=1 KMP_AFFINITY=compact srun --mpi=pmi2 -N1 -n16 -c1 --cpu_bind=cores -m block:block ./a.out.mpi
  maximum iteration:         200
  imax:       15001 jmax:       12501
  time[s]:   23.8055260181427
 ~~~
 * hybrid(1 node, 16 cores, np_i=1, np_j=2, 8 threads/process)
 ~~~
-$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=8 KMP_AFFINITY=compact srun --mpi=pmi2 -N1 -n2 -c8 --cpu_bind=c
-ores -m block:block ./a.out.mpi
+$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=8 KMP_AFFINITY=compact srun --mpi=pmi2 -N1 -n2 -c8 --cpu_bind=cores -m block:block ./a.out.mpi
  maximum iteration:         200
  imax:       15001 jmax:       12501
  time[s]:   15.0692129135132
 ~~~
 * flat MPI(8 nodes, 128 cores, np_i=8, np_j=16, 1 thread/process)
 ~~~
-$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=1 KMP_AFFINITY=compact srun --mpi=pmi2 -N8 -n128 -c1 --cpu_bind
-=cores -m block:block ./a.out.mpi
+$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=1 KMP_AFFINITY=compact srun --mpi=pmi2 -N8 -n128 -c1 --cpu_bind=cores -m block:block ./a.out.mpi
  maximum iteration:         200
  imax:       15001 jmax:       12501
  time[s]:   3.35678577423096
 ~~~
 * hybrid(8 nodes, 128 cores, np_i=4, np_j=4, 8 threads/process)
 ~~~
-$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=8 KMP_AFFINITY=compact srun --mpi=pmi2 -N8 -n16 -c8 --cpu_bind=
-cores -m block:block ./a.out.mpi
+$ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=8 KMP_AFFINITY=compact srun --mpi=pmi2 -N8 -n16 -c8 --cpu_bind=cores -m block:block ./a.out.mpi
  maximum iteration:         200
  imax:       15001 jmax:       12501
  time[s]:   3.36353015899658
