@@ -33,7 +33,9 @@ $ mpirun -np $NP ./a.out.mpi # where $NP must equal to np_i*np_j in fort.11
 
 to view the graph
 ====
-`$ display mandelbrot.png`  
+`$ display mandelbrot.png`
+or
+`$ display mandelbrot_mpi.png`
 ![Alt text](./mandelbrot.png?raw=true "Mandelbrot set")
   
 or  
