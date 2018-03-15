@@ -8,7 +8,6 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import colors
-from scipy.interpolate import griddata
 
 nml   = f90nml.read("fort.11")
 x_min = nml["params"]["x_min"]
