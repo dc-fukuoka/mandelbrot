@@ -141,5 +141,5 @@ $ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=8 
 $ mpirun -x PATH -x LD_LIBRARY_PATH -np 16 -npernode 4 ./a.out.mpi.acc
  maximum iteration:          200
  imax:        15001 jmax:        12501
- time[s]:   0.1400342029519379
+ time[s]:   9.6851900219917297E-002
 ~~~

@@ -1,5 +1,6 @@
 program main
   use mpi_f08
+  use openacc
   implicit none
 
   integer :: iter_max
@@ -32,6 +33,8 @@ program main
   type(mpi_file) :: fh
   integer(kind=mpi_offset_kind) :: disp
   type(mpi_status) :: stat
+
+  integer :: numdevices, mydevice
   
   call mpi_init
   call mpi_comm_rank(mpi_comm_world, iam)
@@ -114,6 +117,10 @@ program main
 
   allocate(abs_zs(istart:iend, jstart:jend))
 
+  numdevices = acc_get_num_devices(acc_device_nvidia)
+  mydevice   = mod(iam, numdevices)
+  call acc_set_device_num(mydevice,acc_device_nvidia)
+  
   !$acc init device_type(acc_device_default)
   !$acc enter data create(abs_zs(:, :))
   !$acc parallel present(abs_zs(:, :))
