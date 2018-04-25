@@ -124,3 +124,11 @@ $ I_MPI_EXTRA_FILESYSTEM=1 I_MPI_EXTRA_FILESYSTEM_LIST=lustre OMP_NUM_THREADS=8 
  imax:       15001 jmax:       12501
  time[s]:   3.36353015899658
 ~~~
+
+* OpenACC(4 nodes, 16 processes, np_i=4, np_j=4, 1 GPU/process) GPU: Tesla P100 x4/node
+~~~
+$ mpirun -x PATH -x LD_LIBRARY_PATH -np 16 -npernode 4 ./a.out.mpi.acc
+ maximum iteration:          200
+ imax:        15001 jmax:        12501
+ time[s]:   0.1400342029519379
+~~~
