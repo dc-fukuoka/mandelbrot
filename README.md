@@ -30,6 +30,17 @@ $ mpirun -np $NP ./a.out.mpi # where $NP must equal to np_i*np_j in fort.11
  time[s]:  7.543087005615234E-003
 ./draw_mpi.py
 ~~~
+* for OpenACC version
+~~~
+$ export MPIFC=mpif90
+$ make a.out.mpi.acc
+$ vi fort.11 # adjust the parameters
+$ mpirun -np $NP ./a.out.mpi # where $NP must equal to np_i*np_j in fort.11
+ maximum iteration:         200
+ imax:         301 jmax:         251
+ time[s]:  7.543087005615234E-003
+./draw_mpi.py
+~~~
 
 to view the graph
 ====
