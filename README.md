@@ -1,4 +1,4 @@
-Mandelbrot set by MPI/OpenMP.
+Mandelbrot set by MPI/OpenMP/OpenACC.
 ====
 requirements for python:
   - numpy
