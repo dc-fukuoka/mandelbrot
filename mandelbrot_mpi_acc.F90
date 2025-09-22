@@ -121,7 +121,7 @@ program main
   mydevice   = mod(iam, numdevices)
   call acc_set_device_num(mydevice,acc_device_nvidia)
   
-  !$acc init device_type(acc_device_default)
+  !$acc init device_type(nvidia)
   !$acc enter data create(abs_zs(:, :))
   !$acc parallel present(abs_zs(:, :))
   !$acc loop

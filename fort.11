@@ -10,6 +10,6 @@ tol      = 1.0d2
 /
 
 &mpi
-np_i = 4
-np_j = 4
+np_i = 2
+np_j = 2
 /
